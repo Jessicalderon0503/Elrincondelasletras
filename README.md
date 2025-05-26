@@ -1,2 +1,2 @@
 # Elrincondelasletras
-Gestion de inventario libreria, docker, .net, CSS, HTML
+Gestion de inventario de una libreria, docker, .net, CSS, HTML
