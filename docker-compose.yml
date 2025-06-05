@@ -1,7 +1,6 @@
-version: "3.8"
 services:
-  Backend:
-    build: ./Backend
+  backend:
+    build: ./backend
     container_name: api
     ports:
       - "3000:3000"
@@ -12,4 +11,4 @@ services:
     ports:
       - "8081:80"
     depends_on:
-      - Backend
+      - backend

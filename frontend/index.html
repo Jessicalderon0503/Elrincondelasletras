@@ -2,10 +2,27 @@
 <html>
 <head>
   <title>PROYECTO CI</title>
+  <script>
+    // Al cargar la página, hacer solicitud al backend
+    window.onload = () => {
+      fetch('http://backend:3000/api')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('respuesta-api').innerText = data;
+        })
+        .catch(err => {
+          console.error('Error al conectarse al backend:', err);
+          document.getElementById('respuesta-api').innerText = 'No se pudo conectar al backend';
+        });
+    };
+  </script>
 </head>
 <body>
   <h1>Hola desde el frontend</h1>
   <p>Este es el contenedor web</p>
-  <p>Subgrupo 7 Integración Continua Politecnico Grancolombiano</p>
+  <p>Subgrupo 7 - Integración Continua - Politécnico Grancolombiano</p>
+  <hr>
+  <p><strong>Respuesta desde el backend:</strong></p>
+  <p id="respuesta-api">Cargando...</p>
 </body>
 </html>
